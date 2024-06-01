@@ -1,0 +1,33 @@
+
+<html>
+<title> Image Processing </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href={{url_for('static', filename = "style.css")}}>
+
+<body><br>
+
+
+<h1>Image Processing</h1><hr>
+
+<form method = 'post' action = '/grey' enctype = "multipart/form-data"><br>
+    <h2>Select an image to add the black and white affect to it. </h2>
+
+    <input class="btn btn-primary btn-lg" type = "file" name = "file"><br><br>
+    <input class="btn btn-success btn-lg" type = "submit" name = "submit">
+    <h3>{{message}}</h3>
+    <img src = "{{url_for('display_image', filename = filename)}}">
+    <!--Write input tag to add upload button-->
+
+    <!--Write input tag to add Submit button-->
+
+    <!--Add h3 tag to display message defined in app.py file after images gets uploaded-->
+
+    <!--Add <img> tag to display the uploaded image-->
+
+<!--End <form> tag-->
+</form>
+
+</body>
+</html>
